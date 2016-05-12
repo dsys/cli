@@ -2,11 +2,12 @@ import argparse
 import models
 import logging
 import importlib
+from models import *
 
 def main():
     args = parse_args()
     logging.basicConfig(level=(logging.WARN if args.verbose else logging.INFO))
-    model = importlib.import_module("models."+args.model_spec).Model()
+    model = importlib.import_module("pavlov.models."+args.model_spec).Model()
     print(dir(model), args)
 
     model.train()
