@@ -4,3 +4,6 @@
 pavlov/env
 *.caffemodel
 *.solverstate
+build/*
+dist/*
+*.egg-info/
