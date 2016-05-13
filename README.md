@@ -3,17 +3,24 @@
 The Pavlov CLI is a command line tool to train and automatically containerize models given a model specification, training hyperparameters, and a dataset. Currently only supports Caffe.
 
 ```
-pavlov train lenet --lr 0.001 --tag=mnist
+pavlov lenet --lr 0.001 --tag=mnist
 ```
 
+## Installation
+Simply run
+
+`python setup.py install`
+
+Now pavlov is in your path and can be run from anywhere. 
 
 ## Examples
 to run the MNIST example, go to the project root and run
+
 ` ./examples/mnist/setup_mnist.sh `
 
 then run
 
-`python pavlov/train lenet`
+`pavlov lenet`
  
 the model will train and save snapshots / intermediate model weights files to the `data/mnist` directory
 
